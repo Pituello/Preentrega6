@@ -1,0 +1,18 @@
+# Python 3.12
+langgraph>=1.0,<2
+langchain>=1.0          # create_agent (agentes especialistas)
+langchain-core>=1.0
+pydantic
+python-dotenv
+loguru
+rank_bm25
+
+# Proveedores de LLM (alcanza con configurar uno en el .env)
+langchain-openai
+langchain-anthropic
+langchain-google-genai
+langchain-ollama
+
+# Tests y notebook de demostración
+pytest
+ipykernel

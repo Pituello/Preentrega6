@@ -1,0 +1,1663 @@
+{
+  "actualizado_en": "2026-10-12T19:54:36+00:00",
+  "escenarios_completados": "5 de 5",
+  "escenarios": [
+    {
+      "numero": 1,
+      "escenario": "Delegación completa (catálogo)",
+      "demuestra": "Supervisor -> Investigador -> Analista -> síntesis, con datos del catálogo",
+      "tarea": "¿Cuántos CV y cuántos Nm más tiene el Virtus Exclusive que el Tera High, y cuántas unidades de esas dos versiones hay en total en la sucursal Palermo?",
+      "esperado": "49 CV, 80 Nm y 3 unidades",
+      "simulacion": null,
+      "configuracion": {
+        "llm": "openai / gpt-4o-mini",
+        "prompts_version": "v3",
+        "prompts_huella": "4bad2593",
+        "busqueda_backend": "local",
+        "max_pasos": 8,
+        "max_reparaciones": 2,
+        "recursion_limit": 40
+      },
+      "ejecutado_en": "2026-10-12T19:53:57+00:00",
+      "respuesta_final": "El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High. En total, hay 3 unidades de estas versiones en stock en la sucursal Palermo. \n\n- Diferencia de potencia: 150 CV (Virtus Exclusive) - 101 CV (Tera High) = 49 CV\n- Diferencia de torque: 250 Nm (Virtus Exclusive) - 170 Nm (Tera High) = 80 Nm\n- Total de unidades en stock: 1 (Virtus Exclusive) + 2 (Tera High) = 3 unidades\n\n(Fuentes: catálogo de concesionaria)",
+      "resumen": {
+        "intervenciones_de_especialistas": 2,
+        "decisiones_llm": 3,
+        "decisiones_por_regla": 0,
+        "validaciones_fallidas": 0,
+        "escalado_humano": false
+      },
+      "resumen_texto": "Resumen: 2 intervenciones de especialistas | decisiones: 3 del LLM, 0 por regla | validaciones fallidas: 0 | escalado a humano: no",
+      "log": [
+        "👤 Usuario: \"¿Cuántos CV y cuántos Nm más tiene el Virtus Exclusive que el Tera High, y cuántas unidades de esas dos versiones hay en total en la sucursal Palermo?\"",
+        "🧭 Supervisor [llm] → investigador",
+        "     por qué: Faltan datos sobre la potencia, torque y stock de las versiones solicitadas para poder realizar el análisis.",
+        "     instrucción: Buscar los datos de potencia (CV) y torque (Nm) del modelo Virtus Exclusive y del modelo Tera High. Además, buscar el stock total de unidades de ambas versiones en la sucursal Palermo.",
+        "🔎 Investigador (3.0s): Se encontraron los datos de potencia y torque del modelo Virtus Exclusive y del modelo Tera High, así como el stock total de unidades en la sucursal Palermo.",
+        "     · potencia del Virtus Exclusive = 150 CV  [fuente: catalogo_concesionaria]",
+        "     · torque del Virtus Exclusive = 250 Nm  [fuente: catalogo_concesionaria]",
+        "     · stock del Virtus Exclusive en Palermo = 1 unidades  [fuente: catalogo_concesionaria]",
+        "     · potencia del Tera High = 101 CV  [fuente: catalogo_concesionaria]",
+        "     · torque del Tera High = 170 Nm  [fuente: catalogo_concesionaria]",
+        "     · stock del Tera High en Palermo = 2 unidades  [fuente: catalogo_concesionaria]",
+        "🛡️ Validador: ✅ el aporte del investigador pasó la validación",
+        "🧭 Supervisor [llm] → analista",
+        "     por qué: Se cuenta con todos los datos necesarios para realizar los cálculos solicitados en la tarea.",
+        "     instrucción: Calcular cuántos CV más tiene el Virtus Exclusive que el Tera High y cuántos Nm más tiene el Virtus Exclusive que el Tera High. También calcular cuántas unidades de esas dos versiones hay en total en la sucursal Palermo.",
+        "🧮 Analista (2.9s): El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High, y hay un total de 3 unidades en stock en la sucursal Palermo.",
+        "     · diferencia de potencia en CV entre Virtus Exclusive y Tera High: 150 - 101 = 49 CV",
+        "     · diferencia de torque en Nm entre Virtus Exclusive y Tera High: 250 - 170 = 80 Nm",
+        "     · total de unidades en stock de Virtus Exclusive y Tera High en Palermo: 1 + 2 = 3 unidades",
+        "🛡️ Validador: ✅ el aporte del analista pasó la validación",
+        "🧭 Supervisor [llm] → FINALIZAR",
+        "     por qué: Todos los datos han sido investigados y analizados correctamente, cumpliendo con los requisitos de la tarea.",
+        "📝 Síntesis:",
+        "     El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High. En total, hay 3 unidades de estas versiones en stock en la sucursal Palermo. ",
+        "     ",
+        "     - Diferencia de potencia: 150 CV (Virtus Exclusive) - 101 CV (Tera High) = 49 CV",
+        "     - Diferencia de torque: 250 Nm (Virtus Exclusive) - 170 Nm (Tera High) = 80 Nm",
+        "     - Total de unidades en stock: 1 (Virtus Exclusive) + 2 (Tera High) = 3 unidades",
+        "     ",
+        "     (Fuentes: catálogo de concesionaria)"
+      ],
+      "eventos": [
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Buscar los datos de potencia (CV) y torque (Nm) del modelo Virtus Exclusive y del modelo Tera High. Además, buscar el stock total de unidades de ambas versiones en la sucursal Palermo.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Buscar los datos de potencia (CV) y torque (Nm) del modelo Virtus Exclusive y del modelo Tera High. Además, buscar el stock total de unidades de ambas versiones en la sucursal Palermo.",
+                "razon": "Faltan datos sobre la potencia, torque y stock de las versiones solicitadas para poder realizar el análisis.",
+                "paso": 0,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 1
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "investigacion": {
+              "resumen": "Se encontraron los datos de potencia y torque del modelo Virtus Exclusive y del modelo Tera High, así como el stock total de unidades en la sucursal Palermo.",
+              "datos": [
+                {
+                  "descripcion": "potencia del Virtus Exclusive",
+                  "valor": 150.0,
+                  "unidad": "CV",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "torque del Virtus Exclusive",
+                  "valor": 250.0,
+                  "unidad": "Nm",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "stock del Virtus Exclusive en Palermo",
+                  "valor": 1.0,
+                  "unidad": "unidades",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "potencia del Tera High",
+                  "valor": 101.0,
+                  "unidad": "CV",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "torque del Tera High",
+                  "valor": 170.0,
+                  "unidad": "Nm",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "stock del Tera High en Palermo",
+                  "valor": 2.0,
+                  "unidad": "unidades",
+                  "fuente": "catalogo_concesionaria"
+                }
+              ]
+            },
+            "evidencia": [
+              "{\"fuente\": \"catalogo_concesionaria\", \"modelo\": \"Virtus\", \"versiones\": [{\"version_id\": \"VIRTUS-TRENDLINE-MT\", \"modelo\": \"Virtus\", \"version\": \"Trendline\", \"motor\": \"1.6 MSI atmosférico, 4 cilindros\", \"potencia_cv\": 110, \"torque_nm\": 155, \"transmision\": \"manual\", \"automatica\": false, \"stock\": {\"Palermo\": 3, \"Belgrano\": 2, \"Córdoba\": 2, \"Rosario\": 1}}, {\"version_id\": \"VIRTUS-EXCLUSIVE-AT6\", \"modelo\": \"Virtus\", \"version\": \"Exclusive\", \"motor\": \"1.4 TSI turbo, 4 cilindros\", \"potencia_cv\": 150, \"torque_nm\": 250, \"transmision\": \"automática de 6 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 1, \"Belgrano\": 0, \"Córdoba\": 1, \"Rosario\": 0}}]}",
+              "{\"fuente\": \"catalogo_concesionaria\", \"modelo\": \"Tera\", \"versiones\": [{\"version_id\": \"TERA-TREND-MT5\", \"modelo\": \"Tera\", \"version\": \"Trend MSI MT5\", \"motor\": \"1.6 MSI atmosférico, 4 cilindros\", \"potencia_cv\": 110, \"torque_nm\": 155, \"transmision\": \"manual de 5 velocidades\", \"automatica\": false, \"stock\": {\"Palermo\": 4, \"Belgrano\": 2, \"Córdoba\": 3, \"Rosario\": 1}}, {\"version_id\": \"TERA-COMFORT-AT6\", \"modelo\": \"Tera\", \"version\": \"Comfort 170 TSI AT6\", \"motor\": \"1.0 TSI turbo, 3 cilindros\", \"potencia_cv\": 101, \"torque_nm\": 170, \"transmision\": \"automática Tiptronic de 6 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 0, \"Belgrano\": 3, \"Córdoba\": 1, \"Rosario\": 0}}, {\"version_id\": \"TERA-HIGH-AT6\", \"modelo\": \"Tera\", \"version\": \"High 170 TSI AT6\", \"motor\": \"1.0 TSI turbo, 3 cilindros\", \"potencia_cv\": 101, \"torque_nm\": 170, \"transmision\": \"automática Tiptronic de 6 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 2, \"Belgrano\": 0, \"Córdoba\": 0, \"Rosario\": 1}}, {\"version_id\": \"TERA-OUTFIT-AT6\", \"modelo\": \"Tera\", \"version\": \"Outfit 170 TSI AT6\", \"motor\": \"1.0 TSI turbo, 3 cilindros\", \"potencia_cv\": 101, \"torque_nm\": 170, \"transmision\": \"automática Tiptronic de 6 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 1, \"Belgrano\": 1, \"Córdoba\": 0, \"Rosario\": 0}}]}"
+            ],
+            "contribuciones": [
+              {
+                "paso": 1,
+                "agente": "investigador",
+                "ok": true,
+                "resumen": "Se encontraron los datos de potencia y torque del modelo Virtus Exclusive y del modelo Tera High, así como el stock total de unidades en la sucursal Palermo.",
+                "error": null,
+                "duracion_s": 3.0395905999466777
+              }
+            ],
+            "messages": [
+              {
+                "content": "Se encontraron los datos de potencia y torque del modelo Virtus Exclusive y del modelo Tera High, así como el stock total de unidades en la sucursal Palermo.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "investigador",
+                "id": "5ec71cbb-6261-48c6-8866-5c30be9c4304",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Calcular cuántos CV más tiene el Virtus Exclusive que el Tera High y cuántos Nm más tiene el Virtus Exclusive que el Tera High. También calcular cuántas unidades de esas dos versiones hay en total en la sucursal Palermo.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Calcular cuántos CV más tiene el Virtus Exclusive que el Tera High y cuántos Nm más tiene el Virtus Exclusive que el Tera High. También calcular cuántas unidades de esas dos versiones hay en total en la sucursal Palermo.",
+                "razon": "Se cuenta con todos los datos necesarios para realizar los cálculos solicitados en la tarea.",
+                "paso": 1,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 2
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "diferencia de potencia en CV entre Virtus Exclusive y Tera High",
+                  "expresion": "150 - 101",
+                  "resultado": 49.0,
+                  "unidad": "CV"
+                },
+                {
+                  "descripcion": "diferencia de torque en Nm entre Virtus Exclusive y Tera High",
+                  "expresion": "250 - 170",
+                  "resultado": 80.0,
+                  "unidad": "Nm"
+                },
+                {
+                  "descripcion": "total de unidades en stock de Virtus Exclusive y Tera High en Palermo",
+                  "expresion": "1 + 2",
+                  "resultado": 3.0,
+                  "unidad": "unidades"
+                }
+              ],
+              "conclusion": "El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High, y hay un total de 3 unidades en stock en la sucursal Palermo."
+            },
+            "contribuciones": [
+              {
+                "paso": 2,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High, y hay un total de 3 unidades en stock en la sucursal Palermo.",
+                "error": null,
+                "duracion_s": 2.921774399932474
+              }
+            ],
+            "messages": [
+              {
+                "content": "El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High, y hay un total de 3 unidades en stock en la sucursal Palermo.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "2facb5dc-508d-4b53-bf41-3c44f33876a8",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "FINALIZAR",
+            "instruccion": "",
+            "decisiones": [
+              {
+                "siguiente": "FINALIZAR",
+                "instruccion": "",
+                "razon": "Todos los datos han sido investigados y analizados correctamente, cumpliendo con los requisitos de la tarea.",
+                "paso": 2,
+                "origen": "llm"
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "sintesis",
+          "actualizacion": {
+            "respuesta_final": "El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High. En total, hay 3 unidades de estas versiones en stock en la sucursal Palermo. \n\n- Diferencia de potencia: 150 CV (Virtus Exclusive) - 101 CV (Tera High) = 49 CV\n- Diferencia de torque: 250 Nm (Virtus Exclusive) - 170 Nm (Tera High) = 80 Nm\n- Total de unidades en stock: 1 (Virtus Exclusive) + 2 (Tera High) = 3 unidades\n\n(Fuentes: catálogo de concesionaria)",
+            "messages": [
+              {
+                "content": "El Virtus Exclusive tiene 49 CV y 80 Nm más que el Tera High. En total, hay 3 unidades de estas versiones en stock en la sucursal Palermo. \n\n- Diferencia de potencia: 150 CV (Virtus Exclusive) - 101 CV (Tera High) = 49 CV\n- Diferencia de torque: 250 Nm (Virtus Exclusive) - 170 Nm (Tera High) = 80 Nm\n- Total de unidades en stock: 1 (Virtus Exclusive) + 2 (Tera High) = 3 unidades\n\n(Fuentes: catálogo de concesionaria)",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "sintesis",
+                "id": "29e7f849-1c8a-494a-8d7f-f94d57539bc8",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "escenario": "Delegación completa (fichas técnicas)",
+      "demuestra": "El Investigador usa la otra herramienta (búsqueda en las fichas) y el Validador lee el formato '89,88 %'",
+      "tarea": "Según Latin NCAP, ¿cuántos puntos porcentuales de diferencia hay entre el Tera y el Nivus en protección de ocupante adulto?",
+      "esperado": "2,59 puntos (Nivus 92,47 % vs. Tera 89,88 %)",
+      "simulacion": null,
+      "configuracion": {
+        "llm": "openai / gpt-4o-mini",
+        "prompts_version": "v3",
+        "prompts_huella": "4bad2593",
+        "busqueda_backend": "local",
+        "max_pasos": 8,
+        "max_reparaciones": 2,
+        "recursion_limit": 40
+      },
+      "ejecutado_en": "2026-10-12T19:54:06+00:00",
+      "respuesta_final": "Según los datos de Latin NCAP, la diferencia en protección de ocupante adulto entre el Tera y el Nivus es de 2.59 puntos porcentuales, siendo el Tera con un 89.88% y el Nivus con un 92.47%. (fuentes: tera.md y nivus.md)",
+      "resumen": {
+        "intervenciones_de_especialistas": 2,
+        "decisiones_llm": 3,
+        "decisiones_por_regla": 0,
+        "validaciones_fallidas": 0,
+        "escalado_humano": false
+      },
+      "resumen_texto": "Resumen: 2 intervenciones de especialistas | decisiones: 3 del LLM, 0 por regla | validaciones fallidas: 0 | escalado a humano: no",
+      "log": [
+        "👤 Usuario: \"Según Latin NCAP, ¿cuántos puntos porcentuales de diferencia hay entre el Tera y el Nivus en protección de ocupante adulto?\"",
+        "🧭 Supervisor [llm] → investigador",
+        "     por qué: Faltan datos específicos sobre la protección de ocupante adulto del Tera y el Nivus en el Latin NCAP para poder realizar el análisis solicitado.",
+        "     instrucción: Buscar los datos de protección de ocupante adulto del Tera y del Nivus en el Latin NCAP. Devuelve los puntos obtenidos por cada modelo y la fuente de la información.",
+        "🔎 Investigador (2.6s): Se encontraron los puntajes de protección de ocupante adulto para el Tera y el Nivus en el Latin NCAP. El Tera obtuvo un 89.88% y el Nivus un 92.47%.",
+        "     · protección de ocupante adulto del Tera = 89.88 %  [fuente: tera.md]",
+        "     · protección de ocupante adulto del Nivus = 92.47 %  [fuente: nivus.md]",
+        "🛡️ Validador: ✅ el aporte del investigador pasó la validación",
+        "🧭 Supervisor [llm] → analista",
+        "     por qué: Faltan los cálculos que se piden en la tarea, y los datos ya están validados.",
+        "     instrucción: Calcular los puntos porcentuales de diferencia entre el Tera y el Nivus en protección de ocupante adulto.",
+        "🧮 Analista (2.1s): La diferencia en protección de ocupante adulto entre el Nivus y el Tera es de 2.59 puntos porcentuales.",
+        "     · diferencia en puntos porcentuales entre Tera y Nivus en protección de ocupante adulto: 92.47 - 89.88 = 2.59 puntos porcentuales",
+        "🛡️ Validador: ✅ el aporte del analista pasó la validación",
+        "🧭 Supervisor [llm] → FINALIZAR",
+        "     por qué: Se ha completado la tarea con todos los datos validados y el análisis realizado correctamente.",
+        "📝 Síntesis:",
+        "     Según los datos de Latin NCAP, la diferencia en protección de ocupante adulto entre el Tera y el Nivus es de 2.59 puntos porcentuales, siendo el Tera con un 89.88% y el Nivus con un 92.47%. (fuentes: tera.md y nivus.md)"
+      ],
+      "eventos": [
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Buscar los datos de protección de ocupante adulto del Tera y del Nivus en el Latin NCAP. Devuelve los puntos obtenidos por cada modelo y la fuente de la información.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Buscar los datos de protección de ocupante adulto del Tera y del Nivus en el Latin NCAP. Devuelve los puntos obtenidos por cada modelo y la fuente de la información.",
+                "razon": "Faltan datos específicos sobre la protección de ocupante adulto del Tera y el Nivus en el Latin NCAP para poder realizar el análisis solicitado.",
+                "paso": 0,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 1
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "investigacion": {
+              "resumen": "Se encontraron los puntajes de protección de ocupante adulto para el Tera y el Nivus en el Latin NCAP. El Tera obtuvo un 89.88% y el Nivus un 92.47%.",
+              "datos": [
+                {
+                  "descripcion": "protección de ocupante adulto del Tera",
+                  "valor": 89.88,
+                  "unidad": "%",
+                  "fuente": "tera.md"
+                },
+                {
+                  "descripcion": "protección de ocupante adulto del Nivus",
+                  "valor": 92.47,
+                  "unidad": "%",
+                  "fuente": "nivus.md"
+                }
+              ]
+            },
+            "evidencia": [
+              "[Fuente: tera.md]\nVolkswagen Tera\n## Seguridad y calificación Latin NCAP\n\n- Resultado: 5 estrellas (calificación máxima), obtenidas en la\n  evaluación de junio de 2025 bajo el protocolo Latin NCAP 3.5 (similar a\n  Euro NCAP 2017).\n- Desglose de puntaje:\n  - Protección de ocupante adulto: 89,88% (35,95 sobre el máximo).\n  - Protección de ocupante infantil: 87,25% (42,75 sobre el máximo).\n  - Protección a peatones y usuarios vulnerables de la vía: 75,77%\n    (36,37 sobre el máximo).\n  - Sistemas de asistencia a la seguridad: 84,76% (36,45 sobre el\n    máximo).\n- La unidad evaluada correspondió a la versión más básica disponible en\n  la región (Trend, con 6 airbags de serie).\n- El AEB (frenado autónomo de emergencia) viene de serie en casi todos\n  los mercados de la región, con la excepción de la versión de entrada\n  en Argentina, donde es opcional.\n- Latin NCAP destacó especialmente que un modelo de precio accesible y\n  producción regional alcance el máximo puntaje de seguridad, algo poco\n  habitual en el segmento de entrada.\n- Con este resultado, el Tera se sumó a Taos, T-Cross, Nivus y Virtus\n  como modelos de Volkswagen con 5 estrellas Latin NCAP.\n\n[Fuente: vento.md]\nVolkswagen Vento\n## Seguridad y calificación Latin NCAP\n\n- Primera evaluación bajo protocolo anterior: 2019, con resultado de 5\n  estrellas.\n- Reevaluación bajo el protocolo actualizado de Latin NCAP: mayo de 2025,\n  correspondiente al *facelift* del modelo (denominado Jetta en algunos\n  mercados, Vento en Argentina y Uruguay).\n  - Resultado: 5 estrellas nuevamente.\n  - Protección de ocupante adulto: 86,87%.\n  - Protección de ocupante infantil: 89,75%.\n  - Protección a peatones y usuarios vulnerables de la vía: 72,60%.\n  - Sistemas de asistencia a la seguridad: 91,06%.\n- La unidad evaluada por Latin NCAP corresponde a la versión más básica\n  disponible en la región para ese modelo — no necesariamente la versión\n  GLI que se vende en Argentina, que trae de serie un nivel de\n  equipamiento de seguridad superior al mínimo evaluado.\n- Equipamiento de la unidad evaluada: 6 airbags (frontales, laterales y\n  de cortina) y control electrónico de estabilidad (ESC) de serie;\n  sistemas ADAS disponibles como opcionales.\n- Latin NCAP destacó que el sedán demostró \"buen rendimiento con\n  estructura estable\" en el impacto frontal, con una protección a\n  peatones que el organismo consideró que \"puede y debe mejorar\".\n\n[Fuente: polo.md]\nVolkswagen Polo\n## Seguridad y calificación Latin NCAP (dos resultados distintos, según generación)\n\nEs importante distinguir dos evaluaciones separadas, realizadas bajo\nprotocolos distintos de Latin NCAP:\n\n### Generación original (2017)\n- Resultado: 5 estrellas para protección de ocupante adulto y 5 estrellas\n  para protección de ocupante infantil, bajo el protocolo Latin NCAP 2.0\n  (equivalente a Euro NCAP 2008).\n- Equipamiento evaluado: 4 airbags y control electrónico de estabilidad\n  de serie.\n- Por ofrecer protección para peatones de serie, el modelo recibió\n  además el **Latin NCAP Advanced Award**.\n- Estructura calificada como \"estable\" en los ensayos de impacto frontal,\n  lateral y lateral de poste.\n\n### Generación actualizada / facelift (evaluada en diciembre de 2022)\n- Resultado: 3 estrellas, bajo el protocolo más exigente Latin NCAP 3.0\n  (equivalente a Euro NCAP 2014).\n- Latin NCAP señaló que, respecto a la unidad original evaluada en 2017,\n  el vehículo había perdido el interruptor manual de desconexión del\n  airbag de acompañante — un elemento que permite instalar de forma\n  segura un sistema de retención infantil (SRI) mirando hacia atrás en el\n  asiento delantero.\n- La versión \"Polo Track\" fue sometida a una prueba de auditoría en 2023\n  (por ser fabricada en una planta distinta), y sus resultados coincidieron\n  con los del Polo evaluado en 2022, confirmando la calificación de 3\n  estrellas para ambas variantes.\n\n**En síntesis:** el Polo que se vende actualmente en la región tiene una\ncalificación de 3 estrellas Latin NCAP, inferior a la que obtuvo la\nversión original de 2017 (5 estrellas + Advanced Award), debido tanto al\nprotocolo más exigente aplicado en la evaluación más reciente como a la\npérdida de un elemento de equipamiento de seguridad.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Seguridad y calificación Latin NCAP\n\n- Primera evaluación (diciembre de 2021, versión producida en Argentina\n  y México): 5 estrellas, con un 90,23% de puntaje total — el primer\n  modelo de Volkswagen en alcanzar esta calificación bajo el protocolo\n  más exigente introducido por Latin NCAP en 2020.\n- Reevaluación voluntaria (2025, tras la renovación estructural y de\n  sistemas, versión producida en México): el Taos volvió voluntariamente\n  a las pruebas y mantuvo las 5 estrellas.\n  - Protección de ocupante adulto: 90,69%.\n  - Protección de ocupante infantil: 89,80%.\n  - Protección a peatones y usuarios vulnerables de la vía: 67,67%.\n  - Sistemas de asistencia a la seguridad: 92,15%.\n- En la campaña de pruebas 2025, Latin NCAP volvió a medir la protección\n  a peatones y el desempeño del AEB tras el rediseño del frontal,\n  sumando además análisis de tecnologías opcionales como detección de\n  punto ciego (BSD) y soporte de mantenimiento de carril (LSS).\n- Equipamiento de serie evaluado: 6 airbags, Control Electrónico de\n  Estabilidad (ESC) y Frenado Autónomo de Emergencia (AEB).\n- El resultado del Taos en 2021 fue calificado por Latin NCAP como \"un\n  hito\" que marcó un antes y un después en los estándares de seguridad\n  exigidos a los fabricantes en la región.",
+              "[Fuente: nivus.md]\nVolkswagen Nivus\n## Seguridad y calificación Latin NCAP\n\n- Resultado: 5 estrellas (calificación máxima), obtenidas en septiembre\n  de 2022 bajo el protocolo Latin NCAP 2020-2024.\n- El Nivus fue el segundo modelo de Volkswagen en alcanzar las 5\n  estrellas bajo este nuevo protocolo más exigente, después del Taos\n  (que lo había logrado en diciembre del año anterior).\n- Desglose oficial de puntaje:\n  - Protección de ocupante adulto: 92,47% (36,99 puntos).\n  - Protección de ocupante infantil: 91,57% (44,87 puntos).\n  - Protección a peatones y usuarios vulnerables de la vía: 48,74%\n    (23,40 puntos).\n  - Sistemas de asistencia a la seguridad: 84,95% (36,53 puntos).\n- La unidad evaluada correspondió a la versión con 6 airbags disponible\n  en la región (equipamiento de la variante \"EX\" en algunos mercados).\n- Latin NCAP señaló que el Nivus podría haber obtenido un puntaje más\n  alto si hubiese incorporado de serie tecnologías como detección de\n  punto ciego (BSD), sistemas de soporte de carril (LSS) y detección de\n  borde de camino (RED) — equipamiento que sí es estándar en la versión\n  europea (Taigo).\n- Comparativamente, en la misma tanda de evaluaciones, un rival directo\n  del segmento (Honda WR-V) obtuvo solo 1 estrella, principalmente por\n  falta de equipamiento de seguridad.\n- Alejandro Furas, Secretario General de Latin NCAP, calificó como\n  \"prometedor\" que fabricantes como Volkswagen incluyan asistencias\n  avanzadas a la conducción en modelos para la región.\n\n[Fuente: tera.md]\nVolkswagen Tera\n## Seguridad y calificación Latin NCAP\n\n- Resultado: 5 estrellas (calificación máxima), obtenidas en la\n  evaluación de junio de 2025 bajo el protocolo Latin NCAP 3.5 (similar a\n  Euro NCAP 2017).\n- Desglose de puntaje:\n  - Protección de ocupante adulto: 89,88% (35,95 sobre el máximo).\n  - Protección de ocupante infantil: 87,25% (42,75 sobre el máximo).\n  - Protección a peatones y usuarios vulnerables de la vía: 75,77%\n    (36,37 sobre el máximo).\n  - Sistemas de asistencia a la seguridad: 84,76% (36,45 sobre el\n    máximo).\n- La unidad evaluada correspondió a la versión más básica disponible en\n  la región (Trend, con 6 airbags de serie).\n- El AEB (frenado autónomo de emergencia) viene de serie en casi todos\n  los mercados de la región, con la excepción de la versión de entrada\n  en Argentina, donde es opcional.\n- Latin NCAP destacó especialmente que un modelo de precio accesible y\n  producción regional alcance el máximo puntaje de seguridad, algo poco\n  habitual en el segmento de entrada.\n- Con este resultado, el Tera se sumó a Taos, T-Cross, Nivus y Virtus\n  como modelos de Volkswagen con 5 estrellas Latin NCAP.\n\n[Fuente: virtus.md]\nVolkswagen Virtus\n## Seguridad y calificación Latin NCAP\n\n- Resultado: 5 estrellas, tanto en protección de ocupante adulto como en\n  protección de ocupante infantil.\n- Debido a que el Virtus comparte con el Polo la misma estructura desde\n  el frente hasta el pilar B, Latin NCAP consideró válidos para el Virtus\n  los resultados de impacto frontal y lateral de poste obtenidos por el\n  Polo en su evaluación original (2017-2018).\n- Por ofrecer protección para peatones de serie, el Virtus recibió el\n  **Latin NCAP Advanced Award**, igual que el Polo de esa misma\n  generación.\n- A diferencia del Polo (cuya generación más reciente bajó a 3 estrellas\n  bajo el protocolo más exigente de 2022), publicaciones recientes\n  (2026) continúan listando al Virtus entre los modelos de Volkswagen con\n  5 estrellas vigentes en la región, junto con Tiguan, Nivus, T-Cross y\n  Taos.\n- Equipamiento de seguridad de serie: aviso de cinturón de seguridad en\n  todas las plazas, anclajes ISOFIX, interruptor de desconexión de airbag\n  de acompañante, cinturones de 3 puntos para todos los pasajeros,\n  control electrónico de estabilidad (ESC).\n\n[Fuente: vento.md]\nVolkswagen Vento\n## Seguridad y calificación Latin NCAP\n\n- Primera evaluación bajo protocolo anterior: 2019, con resultado de 5\n  estrellas.\n- Reevaluación bajo el protocolo actualizado de Latin NCAP: mayo de 2025,\n  correspondiente al *facelift* del modelo (denominado Jetta en algunos\n  mercados, Vento en Argentina y Uruguay).\n  - Resultado: 5 estrellas nuevamente.\n  - Protección de ocupante adulto: 86,87%.\n  - Protección de ocupante infantil: 89,75%.\n  - Protección a peatones y usuarios vulnerables de la vía: 72,60%.\n  - Sistemas de asistencia a la seguridad: 91,06%.\n- La unidad evaluada por Latin NCAP corresponde a la versión más básica\n  disponible en la región para ese modelo — no necesariamente la versión\n  GLI que se vende en Argentina, que trae de serie un nivel de\n  equipamiento de seguridad superior al mínimo evaluado.\n- Equipamiento de la unidad evaluada: 6 airbags (frontales, laterales y\n  de cortina) y control electrónico de estabilidad (ESC) de serie;\n  sistemas ADAS disponibles como opcionales.\n- Latin NCAP destacó que el sedán demostró \"buen rendimiento con\n  estructura estable\" en el impacto frontal, con una protección a\n  peatones que el organismo consideró que \"puede y debe mejorar\"."
+            ],
+            "contribuciones": [
+              {
+                "paso": 1,
+                "agente": "investigador",
+                "ok": true,
+                "resumen": "Se encontraron los puntajes de protección de ocupante adulto para el Tera y el Nivus en el Latin NCAP. El Tera obtuvo un 89.88% y el Nivus un 92.47%.",
+                "error": null,
+                "duracion_s": 2.5913931999821216
+              }
+            ],
+            "messages": [
+              {
+                "content": "Se encontraron los puntajes de protección de ocupante adulto para el Tera y el Nivus en el Latin NCAP. El Tera obtuvo un 89.88% y el Nivus un 92.47%.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "investigador",
+                "id": "2c8986a8-0f15-49ab-bb3e-fe922ea2de20",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Calcular los puntos porcentuales de diferencia entre el Tera y el Nivus en protección de ocupante adulto.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Calcular los puntos porcentuales de diferencia entre el Tera y el Nivus en protección de ocupante adulto.",
+                "razon": "Faltan los cálculos que se piden en la tarea, y los datos ya están validados.",
+                "paso": 1,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 2
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "diferencia en puntos porcentuales entre Tera y Nivus en protección de ocupante adulto",
+                  "expresion": "92.47 - 89.88",
+                  "resultado": 2.59,
+                  "unidad": "puntos porcentuales"
+                }
+              ],
+              "conclusion": "La diferencia en protección de ocupante adulto entre el Nivus y el Tera es de 2.59 puntos porcentuales."
+            },
+            "contribuciones": [
+              {
+                "paso": 2,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "La diferencia en protección de ocupante adulto entre el Nivus y el Tera es de 2.59 puntos porcentuales.",
+                "error": null,
+                "duracion_s": 2.1015902999788523
+              }
+            ],
+            "messages": [
+              {
+                "content": "La diferencia en protección de ocupante adulto entre el Nivus y el Tera es de 2.59 puntos porcentuales.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "dc5147fa-2913-4093-bc32-18e6e5b9d9de",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "FINALIZAR",
+            "instruccion": "",
+            "decisiones": [
+              {
+                "siguiente": "FINALIZAR",
+                "instruccion": "",
+                "razon": "Se ha completado la tarea con todos los datos validados y el análisis realizado correctamente.",
+                "paso": 2,
+                "origen": "llm"
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "sintesis",
+          "actualizacion": {
+            "respuesta_final": "Según los datos de Latin NCAP, la diferencia en protección de ocupante adulto entre el Tera y el Nivus es de 2.59 puntos porcentuales, siendo el Tera con un 89.88% y el Nivus con un 92.47%. (fuentes: tera.md y nivus.md)",
+            "messages": [
+              {
+                "content": "Según los datos de Latin NCAP, la diferencia en protección de ocupante adulto entre el Tera y el Nivus es de 2.59 puntos porcentuales, siendo el Tera con un 89.88% y el Nivus con un 92.47%. (fuentes: tera.md y nivus.md)",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "sintesis",
+                "id": "2a7b1992-2d04-42e2-bc04-cdad01dfb2b7",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "escenario": "Falla de un especialista",
+      "demuestra": "El Investigador falla (simulado): el supervisor no se rompe y lo reintenta",
+      "tarea": "¿Cuánto torque más tiene el Taos que el Nivus Sense?",
+      "esperado": "80 Nm",
+      "simulacion": {
+        "fallar_investigador": 1
+      },
+      "configuracion": {
+        "llm": "openai / gpt-4o-mini",
+        "prompts_version": "v3",
+        "prompts_huella": "4bad2593",
+        "busqueda_backend": "local",
+        "max_pasos": 8,
+        "max_reparaciones": 2,
+        "recursion_limit": 40
+      },
+      "ejecutado_en": "2026-10-12T19:54:13+00:00",
+      "respuesta_final": "Lamentablemente, no podemos proporcionar el torque del modelo Taos, ya que el dato no ha pasado la validación. Según la información disponible, el torque del Nivus Sense es de 170 Nm (fuente: nivus.md). El proceso se ha escalado a revisión humana debido a la falta de un dato validado para el Taos.",
+      "resumen": {
+        "intervenciones_de_especialistas": 3,
+        "decisiones_llm": 1,
+        "decisiones_por_regla": 3,
+        "validaciones_fallidas": 3,
+        "escalado_humano": true
+      },
+      "resumen_texto": "Resumen: 3 intervenciones de especialistas | decisiones: 1 del LLM, 3 por regla | validaciones fallidas: 3 | escalado a humano: SÍ",
+      "log": [
+        "👤 Usuario: \"¿Cuánto torque más tiene el Taos que el Nivus Sense?\"",
+        "   (simulación de fallos activada: {'fallar_investigador': 1})",
+        "🧭 Supervisor [llm] → investigador",
+        "     por qué: Faltan datos sobre el torque de ambos modelos para poder realizar el análisis solicitado.",
+        "     instrucción: Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.",
+        "🔎 Investigador ❌ falló (0.0s): RuntimeError: Fallo simulado del investigador (prueba del camino de error)",
+        "🛡️ Validador: ❌ el aporte del investigador NO pasó la validación",
+        "     - RuntimeError: Fallo simulado del investigador (prueba del camino de error)",
+        "🧭 Supervisor [regla] → investigador",
+        "     por qué: El investigador falló al ejecutarse: se reintenta (1/2).",
+        "     instrucción: Tu intento anterior falló por un error técnico: RuntimeError: Fallo simulado del investigador (prueba del camino de error) Volvé a intentarlo. Tarea: Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.",
+        "🔎 Investigador (2.3s): Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+        "     · torque del Taos = 0 Nm  [fuente: taos.md]",
+        "     · torque del Nivus Sense = 170 Nm  [fuente: nivus.md]",
+        "🛡️ Validador: ❌ el aporte del investigador NO pasó la validación",
+        "     - El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente.",
+        "🧭 Supervisor [regla] → investigador",
+        "     por qué: Bucle de reparación (2/2): se reenvía al investigador su output con los errores específicos del validador, no un reintento ciego.",
+        "     instrucción: Tu respuesta anterior no pasó la validación automática. Tu respuesta anterior: { \"resumen\": \"Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.\", \"…",
+        "🔎 Investigador (2.5s): Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+        "     · torque del Taos = 0 Nm  [fuente: taos.md]",
+        "     · torque del Nivus Sense = 170 Nm  [fuente: nivus.md]",
+        "🛡️ Validador: ❌ el aporte del investigador NO pasó la validación",
+        "     - El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente.",
+        "🧭 Supervisor [regla] → FINALIZAR",
+        "     por qué: El investigador no pasó la validación después de 2 reparaciones: se escala a revisión humana en vez de seguir reintentando (evita el bucle infinito de corrección).",
+        "     ⚠️ ESCALADO A REVISIÓN HUMANA",
+        "📝 Síntesis:",
+        "     Lamentablemente, no podemos proporcionar el torque del modelo Taos, ya que el dato no ha pasado la validación. Según la información disponible, el torque del Nivus Sense es de 170 Nm (fuente: nivus.md). El proceso se ha escalado a revisión humana debido a la falta de un dato validado para el Taos."
+      ],
+      "eventos": [
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.",
+                "razon": "Faltan datos sobre el torque de ambos modelos para poder realizar el análisis solicitado.",
+                "paso": 0,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 1
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "contribuciones": [
+              {
+                "paso": 1,
+                "agente": "investigador",
+                "ok": false,
+                "resumen": "(falló)",
+                "error": "RuntimeError: Fallo simulado del investigador (prueba del camino de error)",
+                "duracion_s": 1.4800112694501877e-05
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": false,
+              "errores": [
+                "RuntimeError: Fallo simulado del investigador (prueba del camino de error)"
+              ],
+              "fallo_de_ejecucion": true
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": false,
+                "errores": [
+                  "RuntimeError: Fallo simulado del investigador (prueba del camino de error)"
+                ],
+                "fallo_de_ejecucion": true
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Tu intento anterior falló por un error técnico: RuntimeError: Fallo simulado del investigador (prueba del camino de error)\n\nVolvé a intentarlo. Tarea: Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Tu intento anterior falló por un error técnico: RuntimeError: Fallo simulado del investigador (prueba del camino de error)\n\nVolvé a intentarlo. Tarea: Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.",
+                "razon": "El investigador falló al ejecutarse: se reintenta (1/2).",
+                "paso": 1,
+                "origen": "regla"
+              }
+            ],
+            "reparaciones": {
+              "investigador": 1
+            },
+            "pasos": 2
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "investigacion": {
+              "resumen": "Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+              "datos": [
+                {
+                  "descripcion": "torque del Taos",
+                  "valor": 0.0,
+                  "unidad": "Nm",
+                  "fuente": "taos.md"
+                },
+                {
+                  "descripcion": "torque del Nivus Sense",
+                  "valor": 170.0,
+                  "unidad": "Nm",
+                  "fuente": "nivus.md"
+                }
+              ]
+            },
+            "evidencia": [
+              "[Fuente: taos.md]\nVolkswagen Taos\n## Descripción general\n\nEl Taos es un SUV compacto de segmento C, un escalón por encima del\nNivus y el T-Cross, y por debajo del Tiguan, dentro de la gama de SUV de\nVolkswagen para la región. Se construye sobre la plataforma MQB A1\n(compartida con el SEAT Ateca y el Škoda Karoq) y en algunos mercados,\ncomo China, se comercializa bajo el nombre \"Tharu\". Su nombre hace\nreferencia a la localidad de Taos, en Nuevo México, Estados Unidos.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Posicionamiento en la gama\n\nEl Taos ocupa el segmento C dentro de la familia de SUV de Volkswagen,\npor debajo del Tiguan y por encima del T-Cross y el Nivus, orientado a\nquienes buscan un SUV de mayor porte que las opciones de entrada de la\nmarca pero sin llegar al tamaño y precio de un Tiguan.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Garantía\n\n- 3 años o 100.000 km, estándar en la región para el modelo.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Rivales / competencia directa\n\n- Jeep Compass\n- Nissan X-Trail\n- Peugeot 3008 / 408 (según mercado y posicionamiento de precio)\n- Chevrolet Equinox\n- Citroën C4 Cactus / Basalt (según mercado)",
+              "[Fuente: nivus.md]\nVolkswagen Nivus\n## Versiones y equipamiento (gama Argentina)\n\nLa gama se compone de cinco versiones, desde una opción manual de entrada\nhasta variantes con asistencias avanzadas a la conducción.\n\n### Sense (versión de entrada)\n- Motor: 1.0 TSI turbo, 3 cilindros.\n- Potencia: 101 CV.\n- Torque: 170 Nm.\n- Transmisión: manual de 5 velocidades — es la única versión de toda la\n  gama del Nivus sin caja automática.\n- Llantas: de acero, rodado 16\".\n- Multimedia: sistema VW Play de 10 pulgadas con Android Auto / Apple\n  CarPlay inalámbricos.\n- Instrumental: tablero digital de 8 pulgadas.\n- Carga: cargador inalámbrico para smartphone de serie.\n\n### Versiones intermedias y superiores\n- Comparten el mismo motor turbo TSI de 1.0 litro, con un torque que en\n  algunas versiones alcanza cerca de 200 Nm — una cifra comparable a la\n  de motores atmosféricos de 2.0 litros, entregada en un rango más amplio\n  de revoluciones.\n- Transmisión automática (a diferencia de la Sense).\n- Suman progresivamente equipamiento de confort, tecnología y, en la\n  versión tope de gama, sistemas ADAS de asistencia a la conducción\n  (frenado autónomo de emergencia, control de velocidad adaptativo).\n\n### Equipamiento de seguridad común a toda la gama\n- 6 airbags: frontales, laterales en los asientos delanteros y de\n  cortina.\n- Control electrónico de estabilidad (ESP) y control de tracción (ASR).\n- Asistente de arranque en pendiente.\n- Frenos ABS.\n- Anclajes ISOFIX.\n- Faros delanteros VW LED.\n\n[Fuente: virtus.md]\nVolkswagen Virtus\n## Versiones y equipamiento (gama Argentina)\n\nLa gama argentina se organiza en cuatro niveles principales: Trendline,\nComfortline, Highline y Exclusive.\n\n### Trendline (manual y automática)\n- Motor de entrada: 1.6 MSI atmosférico, 4 cilindros (109-110 CV, 112\n  lb-pie de torque) en los mercados donde se ofrece esta mecánica.\n- Transmisión: manual de 5 o 6 velocidades, o automática Tiptronic según\n  versión (\"Trendline Aut\").\n- Es la puerta de entrada a la gama del sedán.\n\n### Comfortline\n- Escala intermedia de equipamiento, generalmente con motorización turbo\n  TSI de 1.0 litro.\n- Suma equipamiento de confort y conectividad respecto a la Trendline.\n\n### Highline (tope de gama \"estándar\")\n- Motor turbo TSI de 1.0 litro, 3 cilindros, hasta 114-130 CV según\n  mercado y calibración.\n- Transmisión automática de 6 velocidades.\n- Mayor equipamiento tecnológico y de seguridad (hasta 6 airbags,\n  conectividad inalámbrica Apple CarPlay).\n- Cajuela de 521 litros, una de las más grandes de su segmento —incluso\n  mayor que la del Jetta en algunos mercados.\n\n### Exclusive / GTS (motorización superior)\n- Motor turbo TSI de 1.4 litros, 4 cilindros.\n- Potencia: 150 CV.\n- Torque: 250 Nm.\n- Transmisión: automática de 6 velocidades.\n- Orientación más premium/confort (Exclusive) o más deportiva (GTS),\n  según la variante y el mercado.\n\n[Fuente: polo.md]\nVolkswagen Polo\n## Versiones y equipamiento (gama región / Argentina-México)\n\n### Track / Trendline (versión de entrada)\n- Motor: 1.6 L atmosférico, 4 cilindros, inyección electrónica\n  multipunto.\n- Potencia: 109-110 CV.\n- Torque: 114 lb-pie / 155 Nm.\n- Transmisión: manual de 5 velocidades.\n- Llantas: de acero de 15\", con tapones oscurecidos en la versión Track.\n- Capacidad de baúl: aproximadamente 300 litros.\n- Orientada a un uso funcional y resistente: menor costo de\n  mantenimiento al usar un motor atmosférico en vez de turbo.\n- Frenos: disco delanteros, tambor traseros.\n- Seguridad de serie: ABS, sistema de asistencia para arranque en\n  pendiente (HHC).\n\n### Comfortline\n- Motor: 1.0 TSI turbo, 3 cilindros, inyección directa.\n- Potencia: 99 CV.\n- Torque: 125 lb-pie / 165 Nm.\n- Transmisión: automática Tiptronic de 6 velocidades (o manual según\n  mercado).\n\n### Highline (tope de gama)\n- Misma mecánica turbo 1.0 TSI que la Comfortline.\n- Mayor nivel de equipamiento de confort y tecnología.\n- Seguridad: hasta 6 airbags según mercado, control electrónico de\n  estabilidad (ESC).\n\n### Equipamiento común a toda la gama\n- Sistema multimedia VW Play con pantalla de 10 pulgadas.\n- Conectividad inalámbrica Android Auto / Apple CarPlay.\n- Volante multifunción.\n- Levantavidrios eléctricos.\n- Entre 4 y 6 airbags según versión y mercado.\n- Control electrónico de estabilidad (ESC).\n- Asistente de arranque en pendiente.\n\n[Fuente: nivus.md]\nVolkswagen Nivus\n## Historia y generaciones\n\n- Desarrollo: realizado íntegramente en Brasil por el equipo de\n  Volkswagen do Brasil.\n- Lanzamiento en Brasil: 2020.\n- Lanzamiento en Argentina: 19 de noviembre (año de lanzamiento regional).\n- Versión europea: se comercializa bajo el nombre \"Volkswagen Taigo\" en\n  el mercado europeo, fabricada en España — lo que convierte al Nivus en\n  el primer desarrollo latinoamericano de la marca \"exportado\" como\n  concepto a la producción europea.\n- Actualización de equipamiento (MY22): el Nivus sumó nuevo equipamiento\n  y mejoró su calificación de seguridad.\n- El Nivus es uno de los modelos habilitados para ser homologado en la\n  categoría TC2000 (Súper TC2000) del automovilismo argentino desde 2024."
+            ],
+            "contribuciones": [
+              {
+                "paso": 2,
+                "agente": "investigador",
+                "ok": true,
+                "resumen": "Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+                "error": null,
+                "duracion_s": 2.3341257001738995
+              }
+            ],
+            "messages": [
+              {
+                "content": "Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "investigador",
+                "id": "21c7f67a-a6fd-4306-b5e9-7d906246bf9a",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": false,
+              "errores": [
+                "El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente."
+              ],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": false,
+                "errores": [
+                  "El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente."
+                ],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"resumen\": \"Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.\",\n  \"datos\": [\n    {\n      \"descripcion\": \"torque del Taos\",\n      \"valor\": 0.0,\n      \"unidad\": \"Nm\",\n      \"fuente\": \"taos.md\"\n    },\n    {\n      \"descripcion\": \"torque del Nivus Sense\",\n      \"valor\": 170.0,\n      \"unidad\": \"Nm\",\n      \"fuente\": \"nivus.md\"\n    }\n  ]\n}\n\nErrores encontrados:\n- El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente.\n\nTarea original: Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"resumen\": \"Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.\",\n  \"datos\": [\n    {\n      \"descripcion\": \"torque del Taos\",\n      \"valor\": 0.0,\n      \"unidad\": \"Nm\",\n      \"fuente\": \"taos.md\"\n    },\n    {\n      \"descripcion\": \"torque del Nivus Sense\",\n      \"valor\": 170.0,\n      \"unidad\": \"Nm\",\n      \"fuente\": \"nivus.md\"\n    }\n  ]\n}\n\nErrores encontrados:\n- El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente.\n\nTarea original: Buscar el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. Devuelve el torque de cada modelo con su fuente.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+                "razon": "Bucle de reparación (2/2): se reenvía al investigador su output con los errores específicos del validador, no un reintento ciego.",
+                "paso": 2,
+                "origen": "regla"
+              }
+            ],
+            "reparaciones": {
+              "investigador": 2
+            },
+            "pasos": 3
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "investigacion": {
+              "resumen": "Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+              "datos": [
+                {
+                  "descripcion": "torque del Taos",
+                  "valor": 0.0,
+                  "unidad": "Nm",
+                  "fuente": "taos.md"
+                },
+                {
+                  "descripcion": "torque del Nivus Sense",
+                  "valor": 170.0,
+                  "unidad": "Nm",
+                  "fuente": "nivus.md"
+                }
+              ]
+            },
+            "evidencia": [
+              "[Fuente: taos.md]\nVolkswagen Taos\n## Descripción general\n\nEl Taos es un SUV compacto de segmento C, un escalón por encima del\nNivus y el T-Cross, y por debajo del Tiguan, dentro de la gama de SUV de\nVolkswagen para la región. Se construye sobre la plataforma MQB A1\n(compartida con el SEAT Ateca y el Škoda Karoq) y en algunos mercados,\ncomo China, se comercializa bajo el nombre \"Tharu\". Su nombre hace\nreferencia a la localidad de Taos, en Nuevo México, Estados Unidos.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Posicionamiento en la gama\n\nEl Taos ocupa el segmento C dentro de la familia de SUV de Volkswagen,\npor debajo del Tiguan y por encima del T-Cross y el Nivus, orientado a\nquienes buscan un SUV de mayor porte que las opciones de entrada de la\nmarca pero sin llegar al tamaño y precio de un Tiguan.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Garantía\n\n- 3 años o 100.000 km, estándar en la región para el modelo.\n\n[Fuente: taos.md]\nVolkswagen Taos\n## Rivales / competencia directa\n\n- Jeep Compass\n- Nissan X-Trail\n- Peugeot 3008 / 408 (según mercado y posicionamiento de precio)\n- Chevrolet Equinox\n- Citroën C4 Cactus / Basalt (según mercado)",
+              "[Fuente: nivus.md]\nVolkswagen Nivus\n## Versiones y equipamiento (gama Argentina)\n\nLa gama se compone de cinco versiones, desde una opción manual de entrada\nhasta variantes con asistencias avanzadas a la conducción.\n\n### Sense (versión de entrada)\n- Motor: 1.0 TSI turbo, 3 cilindros.\n- Potencia: 101 CV.\n- Torque: 170 Nm.\n- Transmisión: manual de 5 velocidades — es la única versión de toda la\n  gama del Nivus sin caja automática.\n- Llantas: de acero, rodado 16\".\n- Multimedia: sistema VW Play de 10 pulgadas con Android Auto / Apple\n  CarPlay inalámbricos.\n- Instrumental: tablero digital de 8 pulgadas.\n- Carga: cargador inalámbrico para smartphone de serie.\n\n### Versiones intermedias y superiores\n- Comparten el mismo motor turbo TSI de 1.0 litro, con un torque que en\n  algunas versiones alcanza cerca de 200 Nm — una cifra comparable a la\n  de motores atmosféricos de 2.0 litros, entregada en un rango más amplio\n  de revoluciones.\n- Transmisión automática (a diferencia de la Sense).\n- Suman progresivamente equipamiento de confort, tecnología y, en la\n  versión tope de gama, sistemas ADAS de asistencia a la conducción\n  (frenado autónomo de emergencia, control de velocidad adaptativo).\n\n### Equipamiento de seguridad común a toda la gama\n- 6 airbags: frontales, laterales en los asientos delanteros y de\n  cortina.\n- Control electrónico de estabilidad (ESP) y control de tracción (ASR).\n- Asistente de arranque en pendiente.\n- Frenos ABS.\n- Anclajes ISOFIX.\n- Faros delanteros VW LED.\n\n[Fuente: virtus.md]\nVolkswagen Virtus\n## Versiones y equipamiento (gama Argentina)\n\nLa gama argentina se organiza en cuatro niveles principales: Trendline,\nComfortline, Highline y Exclusive.\n\n### Trendline (manual y automática)\n- Motor de entrada: 1.6 MSI atmosférico, 4 cilindros (109-110 CV, 112\n  lb-pie de torque) en los mercados donde se ofrece esta mecánica.\n- Transmisión: manual de 5 o 6 velocidades, o automática Tiptronic según\n  versión (\"Trendline Aut\").\n- Es la puerta de entrada a la gama del sedán.\n\n### Comfortline\n- Escala intermedia de equipamiento, generalmente con motorización turbo\n  TSI de 1.0 litro.\n- Suma equipamiento de confort y conectividad respecto a la Trendline.\n\n### Highline (tope de gama \"estándar\")\n- Motor turbo TSI de 1.0 litro, 3 cilindros, hasta 114-130 CV según\n  mercado y calibración.\n- Transmisión automática de 6 velocidades.\n- Mayor equipamiento tecnológico y de seguridad (hasta 6 airbags,\n  conectividad inalámbrica Apple CarPlay).\n- Cajuela de 521 litros, una de las más grandes de su segmento —incluso\n  mayor que la del Jetta en algunos mercados.\n\n### Exclusive / GTS (motorización superior)\n- Motor turbo TSI de 1.4 litros, 4 cilindros.\n- Potencia: 150 CV.\n- Torque: 250 Nm.\n- Transmisión: automática de 6 velocidades.\n- Orientación más premium/confort (Exclusive) o más deportiva (GTS),\n  según la variante y el mercado.\n\n[Fuente: polo.md]\nVolkswagen Polo\n## Versiones y equipamiento (gama región / Argentina-México)\n\n### Track / Trendline (versión de entrada)\n- Motor: 1.6 L atmosférico, 4 cilindros, inyección electrónica\n  multipunto.\n- Potencia: 109-110 CV.\n- Torque: 114 lb-pie / 155 Nm.\n- Transmisión: manual de 5 velocidades.\n- Llantas: de acero de 15\", con tapones oscurecidos en la versión Track.\n- Capacidad de baúl: aproximadamente 300 litros.\n- Orientada a un uso funcional y resistente: menor costo de\n  mantenimiento al usar un motor atmosférico en vez de turbo.\n- Frenos: disco delanteros, tambor traseros.\n- Seguridad de serie: ABS, sistema de asistencia para arranque en\n  pendiente (HHC).\n\n### Comfortline\n- Motor: 1.0 TSI turbo, 3 cilindros, inyección directa.\n- Potencia: 99 CV.\n- Torque: 125 lb-pie / 165 Nm.\n- Transmisión: automática Tiptronic de 6 velocidades (o manual según\n  mercado).\n\n### Highline (tope de gama)\n- Misma mecánica turbo 1.0 TSI que la Comfortline.\n- Mayor nivel de equipamiento de confort y tecnología.\n- Seguridad: hasta 6 airbags según mercado, control electrónico de\n  estabilidad (ESC).\n\n### Equipamiento común a toda la gama\n- Sistema multimedia VW Play con pantalla de 10 pulgadas.\n- Conectividad inalámbrica Android Auto / Apple CarPlay.\n- Volante multifunción.\n- Levantavidrios eléctricos.\n- Entre 4 y 6 airbags según versión y mercado.\n- Control electrónico de estabilidad (ESC).\n- Asistente de arranque en pendiente.\n\n[Fuente: nivus.md]\nVolkswagen Nivus\n## Historia y generaciones\n\n- Desarrollo: realizado íntegramente en Brasil por el equipo de\n  Volkswagen do Brasil.\n- Lanzamiento en Brasil: 2020.\n- Lanzamiento en Argentina: 19 de noviembre (año de lanzamiento regional).\n- Versión europea: se comercializa bajo el nombre \"Volkswagen Taigo\" en\n  el mercado europeo, fabricada en España — lo que convierte al Nivus en\n  el primer desarrollo latinoamericano de la marca \"exportado\" como\n  concepto a la producción europea.\n- Actualización de equipamiento (MY22): el Nivus sumó nuevo equipamiento\n  y mejoró su calificación de seguridad.\n- El Nivus es uno de los modelos habilitados para ser homologado en la\n  categoría TC2000 (Súper TC2000) del automovilismo argentino desde 2024."
+            ],
+            "contribuciones": [
+              {
+                "paso": 3,
+                "agente": "investigador",
+                "ok": true,
+                "resumen": "Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+                "error": null,
+                "duracion_s": 2.483198900008574
+              }
+            ],
+            "messages": [
+              {
+                "content": "Se encontró el torque del modelo Taos y del modelo Nivus Sense en las fichas técnicas. El Taos no especifica el torque en la información disponible, mientras que el Nivus Sense tiene un torque de 170 Nm.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "investigador",
+                "id": "1036bf2c-efc0-4e55-971e-f40aca570bc2",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": false,
+              "errores": [
+                "El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente."
+              ],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": false,
+                "errores": [
+                  "El valor 0 del dato 'torque del Taos' no aparece en el texto que devolvió la fuente 'taos.md'. Copiá el número exactamente como figura en la fuente."
+                ],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "FINALIZAR",
+            "instruccion": "",
+            "decisiones": [
+              {
+                "siguiente": "FINALIZAR",
+                "instruccion": "",
+                "razon": "El investigador no pasó la validación después de 2 reparaciones: se escala a revisión humana en vez de seguir reintentando (evita el bucle infinito de corrección).",
+                "paso": 3,
+                "origen": "regla"
+              }
+            ],
+            "escalado_humano": true
+          }
+        },
+        {
+          "nodo": "sintesis",
+          "actualizacion": {
+            "respuesta_final": "Lamentablemente, no podemos proporcionar el torque del modelo Taos, ya que el dato no ha pasado la validación. Según la información disponible, el torque del Nivus Sense es de 170 Nm (fuente: nivus.md). El proceso se ha escalado a revisión humana debido a la falta de un dato validado para el Taos.",
+            "messages": [
+              {
+                "content": "Lamentablemente, no podemos proporcionar el torque del modelo Taos, ya que el dato no ha pasado la validación. Según la información disponible, el torque del Nivus Sense es de 170 Nm (fuente: nivus.md). El proceso se ha escalado a revisión humana debido a la falta de un dato validado para el Taos.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "sintesis",
+                "id": "7f2efde3-9993-4568-a9e7-36515d5c6fd6",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "escenario": "Bucle de reparación",
+      "demuestra": "El Analista entrega una cuenta mal hecha (simulado): el Validador la detecta y se repara con el error específico",
+      "tarea": "¿Qué porcentaje más de potencia tiene el Vento GLI que el Polo Highline?",
+      "esperado": "≈ 132,32 %",
+      "simulacion": {
+        "corromper_analisis": 1
+      },
+      "configuracion": {
+        "llm": "openai / gpt-4o-mini",
+        "prompts_version": "v3",
+        "prompts_huella": "4bad2593",
+        "busqueda_backend": "local",
+        "max_pasos": 8,
+        "max_reparaciones": 2,
+        "recursion_limit": 40
+      },
+      "ejecutado_en": "2026-10-12T19:54:24+00:00",
+      "respuesta_final": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline. Esto se calcula a partir de las potencias de 230 CV para el Vento GLI y 99 CV para el Polo Highline, según el catálogo de la concesionaria. La diferencia porcentual se determina con la fórmula: (230 - 99) / 99 * 100. \n\nFuente: catálogo de concesionaria.",
+      "resumen": {
+        "intervenciones_de_especialistas": 3,
+        "decisiones_llm": 3,
+        "decisiones_por_regla": 1,
+        "validaciones_fallidas": 1,
+        "escalado_humano": false
+      },
+      "resumen_texto": "Resumen: 3 intervenciones de especialistas | decisiones: 3 del LLM, 1 por regla | validaciones fallidas: 1 | escalado a humano: no",
+      "log": [
+        "👤 Usuario: \"¿Qué porcentaje más de potencia tiene el Vento GLI que el Polo Highline?\"",
+        "   (simulación de fallos activada: {'corromper_analisis': 1})",
+        "🧭 Supervisor [llm] → investigador",
+        "     por qué: Faltan datos sobre la potencia de los modelos solicitados para poder realizar el cálculo del porcentaje.",
+        "     instrucción: Buscar los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria. Devuelve la potencia de cada modelo con su fuente.",
+        "🔎 Investigador (1.9s): Se encontraron los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria.",
+        "     · potencia del Vento GLI = 230 CV  [fuente: catalogo_concesionaria]",
+        "     · potencia del Polo Highline = 99 CV  [fuente: catalogo_concesionaria]",
+        "🛡️ Validador: ✅ el aporte del investigador pasó la validación",
+        "🧭 Supervisor [llm] → analista",
+        "     por qué: Se cuenta con los datos de potencia necesarios y se requiere un análisis para calcular el porcentaje más de potencia.",
+        "     instrucción: Calcular el porcentaje más de potencia que tiene el Vento GLI que el Polo Highline.",
+        "🧮 Analista (2.1s): El Vento GLI tiene un 132.32% más de potencia que el Polo Highline. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+        "     · diferencia porcentual de potencia entre Vento GLI y Polo Highline: (230 - 99) / 99 * 100 = 142.323 %",
+        "🛡️ Validador: ❌ el aporte del analista NO pasó la validación",
+        "     - En 'diferencia porcentual de potencia entre Vento GLI y Polo Highline', el resultado declarado (142.323) no coincide con el recálculo de '(230 - 99) / 99 * 100' (132.323). Usá la calculadora y copiá su resultado.",
+        "🧭 Supervisor [regla] → analista",
+        "     por qué: Bucle de reparación (1/2): se reenvía al analista su output con los errores específicos del validador, no un reintento ciego.",
+        "     instrucción: Tu respuesta anterior no pasó la validación automática. Tu respuesta anterior: { \"calculos\": [ { \"descripcion\": \"diferencia porcentual de potencia entre Vento GLI y Polo Highline\", \"expresion\": \"(230 - 99) / 99 * 100\", \"resultado\": 142.323, \"unidad\": \"%\" } ], \"conclusion\": \"El Vento GLI tiene un 132…",
+        "🧮 Analista (2.3s): El Vento GLI tiene un 132.32% más de potencia que el Polo Highline.",
+        "     · diferencia porcentual de potencia entre Vento GLI y Polo Highline: (230 - 99) / 99 * 100 = 132.323 %",
+        "🛡️ Validador: ✅ el aporte del analista pasó la validación",
+        "🧭 Supervisor [llm] → FINALIZAR",
+        "     por qué: Se ha completado la tarea: se han validado todos los datos necesarios y se ha realizado el análisis requerido.",
+        "📝 Síntesis:",
+        "     El Vento GLI tiene un 132.32% más de potencia que el Polo Highline. Esto se calcula a partir de las potencias de 230 CV para el Vento GLI y 99 CV para el Polo Highline, según el catálogo de la concesionaria. La diferencia porcentual se determina con la fórmula: (230 - 99) / 99 * 100. ",
+        "     ",
+        "     Fuente: catálogo de concesionaria."
+      ],
+      "eventos": [
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Buscar los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria. Devuelve la potencia de cada modelo con su fuente.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Buscar los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria. Devuelve la potencia de cada modelo con su fuente.",
+                "razon": "Faltan datos sobre la potencia de los modelos solicitados para poder realizar el cálculo del porcentaje.",
+                "paso": 0,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 1
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "investigacion": {
+              "resumen": "Se encontraron los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria.",
+              "datos": [
+                {
+                  "descripcion": "potencia del Vento GLI",
+                  "valor": 230.0,
+                  "unidad": "CV",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "potencia del Polo Highline",
+                  "valor": 99.0,
+                  "unidad": "CV",
+                  "fuente": "catalogo_concesionaria"
+                }
+              ]
+            },
+            "evidencia": [
+              "{\"fuente\": \"catalogo_concesionaria\", \"modelo\": \"Vento\", \"versiones\": [{\"version_id\": \"VENTO-GLI-DSG7\", \"modelo\": \"Vento\", \"version\": \"GLI\", \"motor\": \"2.0 TSI turbo\", \"potencia_cv\": 230, \"torque_nm\": 350, \"transmision\": \"automática DSG de doble embrague, 7 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 1, \"Belgrano\": 0, \"Córdoba\": 0, \"Rosario\": 0}}]}",
+              "{\"fuente\": \"catalogo_concesionaria\", \"modelo\": \"Polo\", \"versiones\": [{\"version_id\": \"POLO-TRACK-MT5\", \"modelo\": \"Polo\", \"version\": \"Track\", \"motor\": \"1.6 atmosférico, 4 cilindros\", \"potencia_cv\": 110, \"torque_nm\": 155, \"transmision\": \"manual de 5 velocidades\", \"automatica\": false, \"stock\": {\"Palermo\": 5, \"Belgrano\": 4, \"Córdoba\": 2, \"Rosario\": 3}}, {\"version_id\": \"POLO-COMFORTLINE-AT6\", \"modelo\": \"Polo\", \"version\": \"Comfortline\", \"motor\": \"1.0 TSI turbo, 3 cilindros\", \"potencia_cv\": 99, \"torque_nm\": 165, \"transmision\": \"automática Tiptronic de 6 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 2, \"Belgrano\": 0, \"Córdoba\": 1, \"Rosario\": 2}}, {\"version_id\": \"POLO-HIGHLINE-AT6\", \"modelo\": \"Polo\", \"version\": \"Highline\", \"motor\": \"1.0 TSI turbo, 3 cilindros\", \"potencia_cv\": 99, \"torque_nm\": 165, \"transmision\": \"automática Tiptronic de 6 velocidades\", \"automatica\": true, \"stock\": {\"Palermo\": 1, \"Belgrano\": 1, \"Córdoba\": 0, \"Rosario\": 0}}]}"
+            ],
+            "contribuciones": [
+              {
+                "paso": 1,
+                "agente": "investigador",
+                "ok": true,
+                "resumen": "Se encontraron los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria.",
+                "error": null,
+                "duracion_s": 1.8871758999302983
+              }
+            ],
+            "messages": [
+              {
+                "content": "Se encontraron los datos de potencia del Vento GLI y del Polo Highline en el catálogo de la concesionaria.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "investigador",
+                "id": "22026fb8-7db9-4958-bfd4-492cbbf85004",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Calcular el porcentaje más de potencia que tiene el Vento GLI que el Polo Highline.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Calcular el porcentaje más de potencia que tiene el Vento GLI que el Polo Highline.",
+                "razon": "Se cuenta con los datos de potencia necesarios y se requiere un análisis para calcular el porcentaje más de potencia.",
+                "paso": 1,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 2
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "diferencia porcentual de potencia entre Vento GLI y Polo Highline",
+                  "expresion": "(230 - 99) / 99 * 100",
+                  "resultado": 142.323,
+                  "unidad": "%"
+                }
+              ],
+              "conclusion": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline."
+            },
+            "contribuciones": [
+              {
+                "paso": 2,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+                "error": null,
+                "duracion_s": 2.0855503999628127
+              }
+            ],
+            "messages": [
+              {
+                "content": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "7c4212ff-345f-43c8-a4aa-bf60a5e43852",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": false,
+              "errores": [
+                "En 'diferencia porcentual de potencia entre Vento GLI y Polo Highline', el resultado declarado (142.323) no coincide con el recálculo de '(230 - 99) / 99 * 100' (132.323). Usá la calculadora y copiá su resultado."
+              ],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": false,
+                "errores": [
+                  "En 'diferencia porcentual de potencia entre Vento GLI y Polo Highline', el resultado declarado (142.323) no coincide con el recálculo de '(230 - 99) / 99 * 100' (132.323). Usá la calculadora y copiá su resultado."
+                ],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"calculos\": [\n    {\n      \"descripcion\": \"diferencia porcentual de potencia entre Vento GLI y Polo Highline\",\n      \"expresion\": \"(230 - 99) / 99 * 100\",\n      \"resultado\": 142.323,\n      \"unidad\": \"%\"\n    }\n  ],\n  \"conclusion\": \"El Vento GLI tiene un 132.32% más de potencia que el Polo Highline.\"\n}\n\nErrores encontrados:\n- En 'diferencia porcentual de potencia entre Vento GLI y Polo Highline', el resultado declarado (142.323) no coincide con el recálculo de '(230 - 99) / 99 * 100' (132.323). Usá la calculadora y copiá su resultado.\n\nTarea original: Calcular el porcentaje más de potencia que tiene el Vento GLI que el Polo Highline.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"calculos\": [\n    {\n      \"descripcion\": \"diferencia porcentual de potencia entre Vento GLI y Polo Highline\",\n      \"expresion\": \"(230 - 99) / 99 * 100\",\n      \"resultado\": 142.323,\n      \"unidad\": \"%\"\n    }\n  ],\n  \"conclusion\": \"El Vento GLI tiene un 132.32% más de potencia que el Polo Highline.\"\n}\n\nErrores encontrados:\n- En 'diferencia porcentual de potencia entre Vento GLI y Polo Highline', el resultado declarado (142.323) no coincide con el recálculo de '(230 - 99) / 99 * 100' (132.323). Usá la calculadora y copiá su resultado.\n\nTarea original: Calcular el porcentaje más de potencia que tiene el Vento GLI que el Polo Highline.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+                "razon": "Bucle de reparación (1/2): se reenvía al analista su output con los errores específicos del validador, no un reintento ciego.",
+                "paso": 2,
+                "origen": "regla"
+              }
+            ],
+            "reparaciones": {
+              "analista": 1
+            },
+            "pasos": 3
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "diferencia porcentual de potencia entre Vento GLI y Polo Highline",
+                  "expresion": "(230 - 99) / 99 * 100",
+                  "resultado": 132.323,
+                  "unidad": "%"
+                }
+              ],
+              "conclusion": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline."
+            },
+            "contribuciones": [
+              {
+                "paso": 3,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline.",
+                "error": null,
+                "duracion_s": 2.2637372999452055
+              }
+            ],
+            "messages": [
+              {
+                "content": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "c2913fc6-76c4-4afd-b288-0eef4a4a1a3f",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "FINALIZAR",
+            "instruccion": "",
+            "decisiones": [
+              {
+                "siguiente": "FINALIZAR",
+                "instruccion": "",
+                "razon": "Se ha completado la tarea: se han validado todos los datos necesarios y se ha realizado el análisis requerido.",
+                "paso": 3,
+                "origen": "llm"
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "sintesis",
+          "actualizacion": {
+            "respuesta_final": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline. Esto se calcula a partir de las potencias de 230 CV para el Vento GLI y 99 CV para el Polo Highline, según el catálogo de la concesionaria. La diferencia porcentual se determina con la fórmula: (230 - 99) / 99 * 100. \n\nFuente: catálogo de concesionaria.",
+            "messages": [
+              {
+                "content": "El Vento GLI tiene un 132.32% más de potencia que el Polo Highline. Esto se calcula a partir de las potencias de 230 CV para el Vento GLI y 99 CV para el Polo Highline, según el catálogo de la concesionaria. La diferencia porcentual se determina con la fórmula: (230 - 99) / 99 * 100. \n\nFuente: catálogo de concesionaria.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "sintesis",
+                "id": "b7a4d1ac-1a62-4543-8164-5a3d397b8dc5",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "escenario": "Escalado a revisión humana",
+      "demuestra": "El Analista se equivoca siempre (simulado): tras MAX_REPARACIONES se escala en vez de reintentar sin fin",
+      "tarea": "¿Cuántas unidades de la Saveiro hay en total, sumando todas sus versiones, en la sucursal Córdoba?",
+      "esperado": "8 unidades, pero el resultado se marca para revisión humana",
+      "simulacion": {
+        "corromper_analisis": 99
+      },
+      "configuracion": {
+        "llm": "openai / gpt-4o-mini",
+        "prompts_version": "v3",
+        "prompts_huella": "4bad2593",
+        "busqueda_backend": "local",
+        "max_pasos": 8,
+        "max_reparaciones": 2,
+        "recursion_limit": 40
+      },
+      "ejecutado_en": "2026-10-12T19:54:36+00:00",
+      "respuesta_final": "En la sucursal Córdoba, hay un total de 8 unidades de la Saveiro, sumando todas sus versiones. Este dato se obtiene de la siguiente manera:\n\n- Saveiro Trendline cabina simple: 4 unidades\n- Saveiro Comfortline cabina doble: 2 unidades\n- Saveiro Extreme cabina doble: 2 unidades\n\nTotal: 4 + 2 + 2 = 8 unidades (fuente: catalogo_concesionaria).\n\nEs importante mencionar que el proceso se escaló a revisión humana debido a que un resultado no pasó la validación.",
+      "resumen": {
+        "intervenciones_de_especialistas": 4,
+        "decisiones_llm": 2,
+        "decisiones_por_regla": 3,
+        "validaciones_fallidas": 3,
+        "escalado_humano": true
+      },
+      "resumen_texto": "Resumen: 4 intervenciones de especialistas | decisiones: 2 del LLM, 3 por regla | validaciones fallidas: 3 | escalado a humano: SÍ",
+      "log": [
+        "👤 Usuario: \"¿Cuántas unidades de la Saveiro hay en total, sumando todas sus versiones, en la sucursal Córdoba?\"",
+        "   (simulación de fallos activada: {'corromper_analisis': 99})",
+        "🧭 Supervisor [llm] → investigador",
+        "     por qué: Faltan datos sobre el stock de la Saveiro en la sucursal Córdoba.",
+        "     instrucción: Buscar el total de unidades de la Saveiro en la sucursal Córdoba, sumando todas sus versiones.",
+        "🔎 Investigador (2.2s): Se encontraron 3 versiones de la Saveiro en la sucursal Córdoba con un total de 8 unidades.",
+        "     · stock de la Saveiro Trendline cabina simple en Córdoba = 4 unidades  [fuente: catalogo_concesionaria]",
+        "     · stock de la Saveiro Comfortline cabina doble en Córdoba = 2 unidades  [fuente: catalogo_concesionaria]",
+        "     · stock de la Saveiro Extreme cabina doble en Córdoba = 2 unidades  [fuente: catalogo_concesionaria]",
+        "🛡️ Validador: ✅ el aporte del investigador pasó la validación",
+        "🧭 Supervisor [llm] → analista",
+        "     por qué: Faltan los cálculos para determinar la suma total de unidades de la Saveiro en la sucursal Córdoba.",
+        "     instrucción: Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.",
+        "🧮 Analista (2.2s): El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+        "     · suma total de unidades de la Saveiro en Córdoba: 4 + 2 + 2 = 18 unidades",
+        "🛡️ Validador: ❌ el aporte del analista NO pasó la validación",
+        "     - En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.",
+        "🧭 Supervisor [regla] → analista",
+        "     por qué: Bucle de reparación (1/2): se reenvía al analista su output con los errores específicos del validador, no un reintento ciego.",
+        "     instrucción: Tu respuesta anterior no pasó la validación automática. Tu respuesta anterior: { \"calculos\": [ { \"descripcion\": \"suma total de unidades de la Saveiro en Córdoba\", \"expresion\": \"4 + 2 + 2\", \"resultado\": 18.0, \"unidad\": \"unidades\" } ], \"conclusion\": \"El stock total de unidades de la Saveiro en la sucu…",
+        "🧮 Analista (1.9s): El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+        "     · suma total de unidades de la Saveiro en Córdoba: 4 + 2 + 2 = 18 unidades",
+        "🛡️ Validador: ❌ el aporte del analista NO pasó la validación",
+        "     - En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.",
+        "🧭 Supervisor [regla] → analista",
+        "     por qué: Bucle de reparación (2/2): se reenvía al analista su output con los errores específicos del validador, no un reintento ciego.",
+        "     instrucción: Tu respuesta anterior no pasó la validación automática. Tu respuesta anterior: { \"calculos\": [ { \"descripcion\": \"suma total de unidades de la Saveiro en Córdoba\", \"expresion\": \"4 + 2 + 2\", \"resultado\": 18.0, \"unidad\": \"unidades\" } ], \"conclusion\": \"El stock total de unidades de la Saveiro en la sucu…",
+        "🧮 Analista (2.0s): El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+        "     · suma total de unidades de la Saveiro en Córdoba: 4 + 2 + 2 = 18 unidades",
+        "🛡️ Validador: ❌ el aporte del analista NO pasó la validación",
+        "     - En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.",
+        "🧭 Supervisor [regla] → FINALIZAR",
+        "     por qué: El analista no pasó la validación después de 2 reparaciones: se escala a revisión humana en vez de seguir reintentando (evita el bucle infinito de corrección).",
+        "     ⚠️ ESCALADO A REVISIÓN HUMANA",
+        "📝 Síntesis:",
+        "     En la sucursal Córdoba, hay un total de 8 unidades de la Saveiro, sumando todas sus versiones. Este dato se obtiene de la siguiente manera:",
+        "     ",
+        "     - Saveiro Trendline cabina simple: 4 unidades",
+        "     - Saveiro Comfortline cabina doble: 2 unidades",
+        "     - Saveiro Extreme cabina doble: 2 unidades",
+        "     ",
+        "     Total: 4 + 2 + 2 = 8 unidades (fuente: catalogo_concesionaria).",
+        "     ",
+        "     Es importante mencionar que el proceso se escaló a revisión humana debido a que un resultado no pasó la validación."
+      ],
+      "eventos": [
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "investigador",
+            "instruccion": "Buscar el total de unidades de la Saveiro en la sucursal Córdoba, sumando todas sus versiones.",
+            "decisiones": [
+              {
+                "siguiente": "investigador",
+                "instruccion": "Buscar el total de unidades de la Saveiro en la sucursal Córdoba, sumando todas sus versiones.",
+                "razon": "Faltan datos sobre el stock de la Saveiro en la sucursal Córdoba.",
+                "paso": 0,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 1
+          }
+        },
+        {
+          "nodo": "investigador",
+          "actualizacion": {
+            "investigacion": {
+              "resumen": "Se encontraron 3 versiones de la Saveiro en la sucursal Córdoba con un total de 8 unidades.",
+              "datos": [
+                {
+                  "descripcion": "stock de la Saveiro Trendline cabina simple en Córdoba",
+                  "valor": 4.0,
+                  "unidad": "unidades",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "stock de la Saveiro Comfortline cabina doble en Córdoba",
+                  "valor": 2.0,
+                  "unidad": "unidades",
+                  "fuente": "catalogo_concesionaria"
+                },
+                {
+                  "descripcion": "stock de la Saveiro Extreme cabina doble en Córdoba",
+                  "valor": 2.0,
+                  "unidad": "unidades",
+                  "fuente": "catalogo_concesionaria"
+                }
+              ]
+            },
+            "evidencia": [
+              "{\"fuente\": \"catalogo_concesionaria\", \"modelo\": \"Saveiro\", \"versiones\": [{\"version_id\": \"SAVEIRO-TRENDLINE-CS\", \"modelo\": \"Saveiro\", \"version\": \"Trendline cabina simple\", \"motor\": \"1.6 MSI, 4 cilindros\", \"potencia_cv\": 110, \"torque_nm\": 155, \"transmision\": \"manual de 5 velocidades\", \"automatica\": false, \"stock\": {\"Palermo\": 2, \"Belgrano\": 1, \"Córdoba\": 4, \"Rosario\": 3}}, {\"version_id\": \"SAVEIRO-COMFORTLINE-CD\", \"modelo\": \"Saveiro\", \"version\": \"Comfortline cabina doble\", \"motor\": \"1.6 MSI, 4 cilindros\", \"potencia_cv\": 110, \"torque_nm\": 155, \"transmision\": \"manual de 5 velocidades\", \"automatica\": false, \"stock\": {\"Palermo\": 1, \"Belgrano\": 0, \"Córdoba\": 2, \"Rosario\": 1}}, {\"version_id\": \"SAVEIRO-EXTREME-CD\", \"modelo\": \"Saveiro\", \"version\": \"Extreme cabina doble\", \"motor\": \"1.6 MSI, 4 cilindros\", \"potencia_cv\": 110, \"torque_nm\": 155, \"transmision\": \"manual de 5 velocidades\", \"automatica\": false, \"stock\": {\"Palermo\": 0, \"Belgrano\": 1, \"Córdoba\": 2, \"Rosario\": 0}}]}"
+            ],
+            "contribuciones": [
+              {
+                "paso": 1,
+                "agente": "investigador",
+                "ok": true,
+                "resumen": "Se encontraron 3 versiones de la Saveiro en la sucursal Córdoba con un total de 8 unidades.",
+                "error": null,
+                "duracion_s": 2.1598891001194715
+              }
+            ],
+            "messages": [
+              {
+                "content": "Se encontraron 3 versiones de la Saveiro en la sucursal Córdoba con un total de 8 unidades.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "investigador",
+                "id": "488c0046-5a20-481e-8242-cd1e0b9e20db",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "investigador",
+              "ok": true,
+              "errores": [],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "investigador",
+                "ok": true,
+                "errores": [],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.",
+                "razon": "Faltan los cálculos para determinar la suma total de unidades de la Saveiro en la sucursal Córdoba.",
+                "paso": 1,
+                "origen": "llm"
+              }
+            ],
+            "pasos": 2
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "suma total de unidades de la Saveiro en Córdoba",
+                  "expresion": "4 + 2 + 2",
+                  "resultado": 18.0,
+                  "unidad": "unidades"
+                }
+              ],
+              "conclusion": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades."
+            },
+            "contribuciones": [
+              {
+                "paso": 2,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+                "error": null,
+                "duracion_s": 2.215916700195521
+              }
+            ],
+            "messages": [
+              {
+                "content": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "3fb1617d-126c-4aa4-81ce-2ab739d595e4",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": false,
+              "errores": [
+                "En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado."
+              ],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": false,
+                "errores": [
+                  "En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado."
+                ],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"calculos\": [\n    {\n      \"descripcion\": \"suma total de unidades de la Saveiro en Córdoba\",\n      \"expresion\": \"4 + 2 + 2\",\n      \"resultado\": 18.0,\n      \"unidad\": \"unidades\"\n    }\n  ],\n  \"conclusion\": \"El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.\"\n}\n\nErrores encontrados:\n- En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.\n\nTarea original: Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"calculos\": [\n    {\n      \"descripcion\": \"suma total de unidades de la Saveiro en Córdoba\",\n      \"expresion\": \"4 + 2 + 2\",\n      \"resultado\": 18.0,\n      \"unidad\": \"unidades\"\n    }\n  ],\n  \"conclusion\": \"El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.\"\n}\n\nErrores encontrados:\n- En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.\n\nTarea original: Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+                "razon": "Bucle de reparación (1/2): se reenvía al analista su output con los errores específicos del validador, no un reintento ciego.",
+                "paso": 2,
+                "origen": "regla"
+              }
+            ],
+            "reparaciones": {
+              "analista": 1
+            },
+            "pasos": 3
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "suma total de unidades de la Saveiro en Córdoba",
+                  "expresion": "4 + 2 + 2",
+                  "resultado": 18.0,
+                  "unidad": "unidades"
+                }
+              ],
+              "conclusion": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades."
+            },
+            "contribuciones": [
+              {
+                "paso": 3,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+                "error": null,
+                "duracion_s": 1.901057899929583
+              }
+            ],
+            "messages": [
+              {
+                "content": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "e0493fce-5cb8-4d21-a3d1-35c54d14c70d",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": false,
+              "errores": [
+                "En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado."
+              ],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": false,
+                "errores": [
+                  "En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado."
+                ],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "analista",
+            "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"calculos\": [\n    {\n      \"descripcion\": \"suma total de unidades de la Saveiro en Córdoba\",\n      \"expresion\": \"4 + 2 + 2\",\n      \"resultado\": 18.0,\n      \"unidad\": \"unidades\"\n    }\n  ],\n  \"conclusion\": \"El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.\"\n}\n\nErrores encontrados:\n- En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.\n\nTarea original: Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+            "decisiones": [
+              {
+                "siguiente": "analista",
+                "instruccion": "Tu respuesta anterior no pasó la validación automática.\n\nTu respuesta anterior:\n{\n  \"calculos\": [\n    {\n      \"descripcion\": \"suma total de unidades de la Saveiro en Córdoba\",\n      \"expresion\": \"4 + 2 + 2\",\n      \"resultado\": 18.0,\n      \"unidad\": \"unidades\"\n    }\n  ],\n  \"conclusion\": \"El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.\"\n}\n\nErrores encontrados:\n- En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado.\n\nTarea original: Calcular la suma total de unidades de la Saveiro en la sucursal Córdoba.\n\nCorregí SOLO lo que señalan los errores y devolvé la respuesta completa de nuevo.",
+                "razon": "Bucle de reparación (2/2): se reenvía al analista su output con los errores específicos del validador, no un reintento ciego.",
+                "paso": 3,
+                "origen": "regla"
+              }
+            ],
+            "reparaciones": {
+              "analista": 2
+            },
+            "pasos": 4
+          }
+        },
+        {
+          "nodo": "analista",
+          "actualizacion": {
+            "analisis": {
+              "calculos": [
+                {
+                  "descripcion": "suma total de unidades de la Saveiro en Córdoba",
+                  "expresion": "4 + 2 + 2",
+                  "resultado": 18.0,
+                  "unidad": "unidades"
+                }
+              ],
+              "conclusion": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades."
+            },
+            "contribuciones": [
+              {
+                "paso": 4,
+                "agente": "analista",
+                "ok": true,
+                "resumen": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades. [SIMULACIÓN: resultado alterado a propósito para probar el validador]",
+                "error": null,
+                "duracion_s": 1.9881617999635637
+              }
+            ],
+            "messages": [
+              {
+                "content": "El stock total de unidades de la Saveiro en la sucursal Córdoba es de 8 unidades.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "analista",
+                "id": "bde62fc0-705e-4f50-9598-c5709dcb9673",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "validador",
+          "actualizacion": {
+            "validacion": {
+              "agente": "analista",
+              "ok": false,
+              "errores": [
+                "En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado."
+              ],
+              "fallo_de_ejecucion": false
+            },
+            "validaciones": [
+              {
+                "agente": "analista",
+                "ok": false,
+                "errores": [
+                  "En 'suma total de unidades de la Saveiro en Córdoba', el resultado declarado (18) no coincide con el recálculo de '4 + 2 + 2' (8). Usá la calculadora y copiá su resultado."
+                ],
+                "fallo_de_ejecucion": false
+              }
+            ]
+          }
+        },
+        {
+          "nodo": "supervisor",
+          "actualizacion": {
+            "siguiente": "FINALIZAR",
+            "instruccion": "",
+            "decisiones": [
+              {
+                "siguiente": "FINALIZAR",
+                "instruccion": "",
+                "razon": "El analista no pasó la validación después de 2 reparaciones: se escala a revisión humana en vez de seguir reintentando (evita el bucle infinito de corrección).",
+                "paso": 4,
+                "origen": "regla"
+              }
+            ],
+            "escalado_humano": true
+          }
+        },
+        {
+          "nodo": "sintesis",
+          "actualizacion": {
+            "respuesta_final": "En la sucursal Córdoba, hay un total de 8 unidades de la Saveiro, sumando todas sus versiones. Este dato se obtiene de la siguiente manera:\n\n- Saveiro Trendline cabina simple: 4 unidades\n- Saveiro Comfortline cabina doble: 2 unidades\n- Saveiro Extreme cabina doble: 2 unidades\n\nTotal: 4 + 2 + 2 = 8 unidades (fuente: catalogo_concesionaria).\n\nEs importante mencionar que el proceso se escaló a revisión humana debido a que un resultado no pasó la validación.",
+            "messages": [
+              {
+                "content": "En la sucursal Córdoba, hay un total de 8 unidades de la Saveiro, sumando todas sus versiones. Este dato se obtiene de la siguiente manera:\n\n- Saveiro Trendline cabina simple: 4 unidades\n- Saveiro Comfortline cabina doble: 2 unidades\n- Saveiro Extreme cabina doble: 2 unidades\n\nTotal: 4 + 2 + 2 = 8 unidades (fuente: catalogo_concesionaria).\n\nEs importante mencionar que el proceso se escaló a revisión humana debido a que un resultado no pasó la validación.",
+                "additional_kwargs": {},
+                "response_metadata": {},
+                "type": "ai",
+                "name": "sintesis",
+                "id": "05edc6e2-6a4a-430a-ae6b-a6a2f1f2be12",
+                "tool_calls": [],
+                "invalid_tool_calls": [],
+                "usage_metadata": null
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
