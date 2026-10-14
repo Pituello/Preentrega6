@@ -1,0 +1,32 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.1.1, pluggy-1.6.0 -- D:\Documents\Repositories\CoderHouse-IA-ENG\Preentrega6\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: D:\Documents\Repositories\CoderHouse-IA-ENG\Preentrega6
+configfile: pytest.ini
+plugins: anyio-4.15.1, langsmith-0.14.7, platformdirs-4.13.0
+collecting ... collected 22 items
+
+tests/test_orquestador.py::test_delegacion_completa_investigador_analista_sintesis PASSED [  4%]
+tests/test_orquestador.py::test_dato_inventado_se_repara_con_el_error_especifico PASSED [  9%]
+tests/test_orquestador.py::test_fuente_inventada_no_pasa PASSED          [ 13%]
+tests/test_orquestador.py::test_cuenta_mal_hecha_se_repara PASSED        [ 18%]
+tests/test_orquestador.py::test_numero_que_no_vino_de_la_investigacion_no_pasa PASSED [ 22%]
+tests/test_orquestador.py::test_escala_a_revision_humana_tras_las_reparaciones PASSED [ 27%]
+tests/test_orquestador.py::test_especialista_que_falla_no_rompe_al_supervisor PASSED [ 31%]
+tests/test_orquestador.py::test_simulacion_de_fallo_por_configuracion PASSED [ 36%]
+tests/test_orquestador.py::test_simulacion_de_analisis_corrupto_la_detecta_el_validador PASSED [ 40%]
+tests/test_orquestador.py::test_limite_de_pasos_corta_un_supervisor_infinito PASSED [ 45%]
+tests/test_orquestador.py::test_guarda_no_deja_analizar_sin_investigacion PASSED [ 50%]
+tests/test_orquestador.py::test_cada_especialista_recibe_solo_su_instruccion PASSED [ 54%]
+tests/test_orquestador.py::test_el_analista_ve_los_datos_validados_y_no_la_evidencia_cruda PASSED [ 59%]
+tests/test_orquestador.py::test_un_nodo_no_puede_escribir_fuera_de_su_parcela PASSED [ 63%]
+tests/test_orquestador.py::test_validacion_lee_los_numeros_con_formato_argentino PASSED [ 68%]
+tests/test_orquestador.py::test_busqueda_refuerza_la_ficha_del_modelo_nombrado PASSED [ 72%]
+tests/test_orquestador.py::test_calculadora_segura PASSED                [ 77%]
+tests/test_orquestador.py::test_agente_real_con_create_agent_devuelve_aporte_y_evidencia PASSED [ 81%]
+tests/test_orquestador.py::test_la_simulacion_no_altera_el_aporte_original PASSED [ 86%]
+tests/test_orquestador.py::test_catalogo_acepta_el_modelo_con_la_version_pegada PASSED [ 90%]
+tests/test_orquestador.py::test_investigacion_sin_datos_no_pasa_y_termina_escalada PASSED [ 95%]
+tests/test_orquestador.py::test_analisis_puede_encadenar_el_resultado_de_un_calculo_anterior PASSED [100%]
+
+============================= 22 passed in 3.92s ==============================
